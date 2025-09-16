@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Productivity Corner - Automation Systems That Save 20+ Hours Per Week</title>
+    <meta name="description" content="Professional automation systems for email and social media. Save 20+ hours weekly with our proven blueprints. Instant download, no monthly fees.">
+    <meta name="keywords" content="email automation, social media automation, productivity, time management, business automation, digital products">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="The Productivity Corner - Automation Systems">
+    <meta property="og:description" content="Save 20+ hours weekly with proven automation systems">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://theproductivitycorner.com">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #2D3748;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4A5568;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: #4A5568;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background: #F7FAFC;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #2D3748;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #718096;
+            margin-bottom: 4rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+        
+        .product-title {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: #2D3748;
+        }
+        
+        .product-subtitle {
+            color: #718096;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .price {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .current-price {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #38A169;
+        }
+        
+        .original-price {
+            font-size: 1.2rem;
+            text-decoration: line-through;
+            color: #A0AEC0;
+        }
+        
+        .savings {
+            background: #FED7D7;
+            color: #C53030;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .features li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .features li::before {
+            content: '✅';
+            font-size: 1.1rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            text-align: center;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid #667eea;
+            color: #667eea;
+            margin-top: 1rem;
+        }
+        
+        .btn-secondary:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background: white;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .testimonial {
+            background: #F7FAFC;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: #4A5568;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #2D3748;
+        }
+        
+        .testimonial-role {
+            color: #718096;
+            font-size: 0.9rem;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 80px 0;
+            background: #F7FAFC;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            color: #2D3748;
+            cursor: pointer;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #718096;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2D3748;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #E2E8F0;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #A0AEC0;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-section a:hover {
+            color: #667eea;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            background: #4A5568;
+            padding: 0.8rem;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: #667eea;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .product-card {
+                padding: 1.5rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        
+        /* Trust Indicators */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            color: white;
+            font-size: 0.9rem;
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(102, 126, 234, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(102, 126, 234, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">The Productivity Corner</div>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Save 20+ Hours Per Week With Professional Automation</h1>
+            <p>Stop drowning in emails and social media. Our proven automation systems free up your time for what matters most - growing your business.</p>
+            
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Hours Saved Weekly</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">1,247</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3-4</span>
+                    <span class="stat-label">Hours Setup Time</span>
+                </div>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span>✅</span>
+                    <span>Instant Download</span>
+                </div>
+                <div class="trust-badge">
+                    <span>🔒</span>
+                    <span>30-Day Guarantee</span>
+                </div>
+                <div class="trust-badge">
+                    <span>⚡</span>
+                    <span>No Monthly Fees</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Professional Automation Systems</h2>
+            <p class="section-subtitle">Choose the system that fits your biggest time drain. Both include complete setup guides, templates, and ongoing support.</p>
+            
+            <div class="products-grid">
+                <!-- Email Automation Product -->
+                <div class="product-card fade-in">
+                    <h3 class="product-title">Email Automation Blueprint</h3>
+                    <p class="product-subtitle">Transform email chaos into an organized, automated system</p>
+                    
+                    <div class="price">
+                        <span class="current-price">$197</span>
+                        <span class="original-price">$497</span>
+                        <span class="savings">Save 60%</span>
+                    </div>
+                    
+                    <ul class="features">
+                        <li>Complete 25-page setup guide</li>
+                        <li>15 Gmail filter templates (copy-paste ready)</li>
+                        <li>25 response templates for every situation</li>
+                        <li>Auto-sorting system for inbox zero</li>
+                        <li>Emergency email protocols</li>
+                        <li>Step-by-step implementation checklist</li>
+                        <li>Troubleshooting guide + bonuses</li>
+                        <li>Save 10+ hours per week guaranteed</li>
+                    </ul>
+                    
+                    <a href="#" class="btn pulse">Get Email Automation - $197</a>
+                    <a href="#" class="btn btn-secondary">View Sample Pages</a>
+                </div>
+                
+                <!-- Social Media Automation Product -->
+                <div class="product-card fade-in">
+                    <h3 class="product-title">Social Media Automation System</h3>
+                    <p class="product-subtitle">Create 3 months of content in 3 hours + full automation</p>
+                    
+                    <div class="price">
+                        <span class="current-price">$297</span>
+                        <span class="original-price">$797</span>
+                        <span class="savings">Save 63%</span>
+                    </div>
+                    
+                    <ul class="features">
+                        <li>35-page complete automation guide</li>
+                        <li>30-day content calendar (ready-to-post)</li>
+                        <li>50 AI prompts for endless content creation</li>
+                        <li>Platform setup guides (Buffer, Hootsuite, Later)</li>
+                        <li>20 visual content templates (Canva designs)</li>
+                        <li>Analytics tracking and optimization system</li>
+                        <li>Crisis management protocols</li>
+                        <li>Save 15+ hours per week guaranteed</li>
+                    </ul>
+                    
+                    <a href="#" class="btn pulse">Get Social Media System - $297</a>
+                    <a href="#" class="btn btn-secondary">View Sample Content</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#" class="btn" style="background: #38A169; font-size: 1.3rem; padding: 1.5rem 3rem;">
+                    🔥 Get Both Systems - $447 (Save $347)
+                </a>
+                <p style="margin-top: 1rem; color: #718096;">Limited time bundle offer - normally $794</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"I went from spending 3 hours daily on emails to just 30 minutes. The automation blueprint literally gave me my life back."</p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">Marketing Consultant</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"The social media system is incredible. I created 90 days of content in one afternoon and now everything posts automatically."</p>
+                    <div class="testimonial-author">Mike Rodriguez</div>
+                    <div class="testimonial-role">Business Owner</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Best investment I've made for my business. The time savings alone paid for both systems in the first week."</p>
+                    <div class="testimonial-author">Jennifer Walsh</div>
+                    <div class="testimonial-role">Agency Founder</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    How quickly can I see results?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Most customers see immediate results within 2-3 hours of implementation. The email system starts working immediately, and social media automation begins posting within 24 hours of setup.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do I need technical skills?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    Not at all! Our guides include step-by-step screenshots and simple copy-paste instructions. If you can use email and social media, you can implement these systems.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    What if it doesn't work for me?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    We offer a 30-day money-back guarantee. If you don't save at least 10 hours per week with our systems, we'll refund every penny.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">
+                    Are there any monthly fees?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    No monthly fees ever! This is a one-time purchase that gives you lifetime access to all materials and any future updates.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Productivity Corner</h3>
+                    <p>Professional automation systems that save you 20+ hours per week. Join thousands of satisfied customers who've transformed their productivity.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#products">Our Products</a></p>
+                    <p><a href="#testimonials">Customer Reviews</a></p>
+                    <p><a href="#faq">FAQ</a></p>
+                    <p><a href="#">Refund Policy</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>support@theproductivitycorner.com</p>
+                    <p>Response time: Under 4 hours</p>
+                    <div class="social-links" style="margin-top: 1rem;">
+                        <a href="#">📧</a>
+                        <a href="#">📱</a>
+                        <a href="#">💼</a>
+                    </div>
+                </div>
+            </div>
+            <p>&copy; 2025 The Productivity Corner. All rights reserved. | Terms of Service | Privacy Policy</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isOpen = faqItem.classList.contains('open');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('open');
+                    item.querySelector('.faq-answer').style.display = 'none';
+                    item.querySelector('.faq-question span').textContent = '+';
+                });
+                
+                // Open clicked item if it wasn't already open
+                if (!isOpen) {
+                    faqItem.classList.add('open');
+                    answer.style.display = 'block';
+                    button.querySelector('span').textContent = '-';
+                }
+            });
+        });
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation to elements when they come into view
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all product cards and testimonials
+        document.querySelectorAll('.product-card, .testimonial').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
